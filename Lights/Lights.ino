@@ -15,51 +15,82 @@ void setup() {
 }
 
 void loop() {
+
+
+  sem1Green();
+  sem1Yellow();
+  sem2Green();
+  sem2Yellow();
+  sem3Green();
+  sem3Yellow();
+  sem4Green();
+  sem4Yellow();
+ 
+}
+
+
+void sem1Green(){
   digitalWrite(semaforo1[2], HIGH);
   digitalWrite(semaforo1[0], LOW);
   digitalWrite(semaforo2[0], HIGH);
   digitalWrite(semaforo3[0], HIGH);
   digitalWrite(semaforo4[0], HIGH);
   delay(10000);
-  // Making Green LED at semaforo 1 LOW and making yellow LED at semaforo 1 HIGH for 2 seconds
+  }
+
+void sem1Yellow(){
   digitalWrite(semaforo1[1], HIGH);
   digitalWrite(semaforo1[2], LOW);
-  delay(1000);
+  delay(3000);
   digitalWrite(semaforo1[1], LOW);
-  // Making Green  LED at semaforo 2 and red LED's at other semaforo HIGH
+  }
+
+
+void sem2Green(){
   digitalWrite(semaforo1[0], HIGH);
   digitalWrite(semaforo2[2], HIGH);
   digitalWrite(semaforo2[0], LOW);
   digitalWrite(semaforo3[0], HIGH);
   digitalWrite(semaforo4[0], HIGH);
-  delay(2000);
-  // Making Green LED at semaforo 2 LOW and making yellow LED at semaforo 2 HIGH for 2 seconds
+  delay(10000);
+  }
+
+void sem2Yellow(){
   digitalWrite(semaforo2[1], HIGH);
   digitalWrite(semaforo2[2], LOW);
-  delay(1000);
+  delay(3000);
   digitalWrite(semaforo2[1], LOW);
-  // Making Green  LED at semaforo 3 and red LED's at other semaforo HIGH
+  }
+
+
+void sem3Green(){
   digitalWrite(semaforo1[0], HIGH);
   digitalWrite(semaforo2[0], HIGH);
   digitalWrite(semaforo3[2], HIGH);
   digitalWrite(semaforo3[0], LOW);
   digitalWrite(semaforo4[0], HIGH);
-  delay(1000);
-  // Making Green LED at semaforo 3 LOW and making yellow LED at semaforo 3 HIGH for 2 seconds
+  delay(10000);
+  }
+
+void sem3Yellow(){
   digitalWrite(semaforo3[1], HIGH);
   digitalWrite(semaforo3[2], LOW);
-  delay(1000);
+  delay(3000);
   digitalWrite(semaforo3[1], LOW);
-  // Making Green  LED at semaforo 4 and red LED's at other semaforo HIGH
+  }
+
+  void sem4Green(){
   digitalWrite(semaforo1[0], HIGH);
   digitalWrite(semaforo2[0], HIGH);
   digitalWrite(semaforo3[0], HIGH);
   digitalWrite(semaforo4[2], HIGH);
   digitalWrite(semaforo4[0], LOW);
-  delay(2000);
-  // Making Green LED at semaforo 4 LOW and making yellow LED at semaforo 4 HIGH for 2 seconds
+  delay(10000);
+  }
+
+void sem4Yellow(){
   digitalWrite(semaforo4[1], HIGH);
   digitalWrite(semaforo4[2], LOW);
-  delay(2000);
+  delay(3000);
   digitalWrite(semaforo4[1], LOW);
-}
+  }
